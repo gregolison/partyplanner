@@ -50,10 +50,13 @@ a[data-toggle="collapse"] {
     }
 }
 
-
+html{
+	height: 100%;
+}
 body {
     font-family: 'Comfortaa';
     background: #fafbfe;
+    height: 100%;
 }
 
 p {
@@ -73,20 +76,33 @@ a, a:hover, a:focus {
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
     background: white;
-	box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
-    color: #6c757d;
+    color: inherit;
 	border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
     transition: all 0.3s;
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
-	height: 114px;
-	background-image: url('../img/teste.png');
+    padding: 20px 20px 0px;
+	height: 120px;
+	background-image: url('../img/teste2.png');
 	background-size: 100% 100%;
 	border-top-left-radius: 0.3rem;
 	border-top-right-radius: 0.3rem;
+}
+#sidebar .header-photo {
+	width: 74px;
+	height: 74px;
+	margin: auto;
+	border: solid 2px #fff;
+	background-image: url('../img/noimage4.png');
+	background-size: 100% 100%;
+}
+#sidebar .header-nome {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 13px;
+	font-weight: bold;
 }
 
 #sidebar ul.components {
@@ -126,9 +142,13 @@ a, a:hover, a:focus {
 #sidebar ul ul li{
 	padding: 30px 30px 0px 30px;
 }
+#sidebar .btn-inner--icon{
+    background: #8581ff;
+    padding: 1px 3.5px;
+    margin-right: 10px;
+}
 .navigation{
 	width: 100%;
-	box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
 }
 .navbar ul{
 	float: right;
@@ -142,7 +162,7 @@ a, a:hover, a:focus {
 	width: 160px;
 }
 .navbar-brand{
-	margin-right: 100px;
+	margin-right: 90px;
 	font-size: 1.3rem;
 	font-weight: bold;
 	color: #6e69ff !important;
@@ -153,16 +173,88 @@ a, a:hover, a:focus {
 	margin-left: auto;
 	margin-right: auto;
 }
+
 @media (min-width: 992px){
 .navbar-expand-lg {
     height: 70px;
 }
 }
-#content{
-	margin: 0px 0px 0px 30px;
-	background: #fff;
-	box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+.container.container-menu{
+    width: auto;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+#page{
 	width: 100%;
-	border-top-left-radius: 0.3rem;
-    border-top-right-radius: 0.3rem;
+	margin: 0px 0px 0px 30px;
+	text-align: center;
+}
+#page .content{
+	display: inline-block;
+}
+.content{
+	background: #fff;
+	border-radius: 0.3rem;
+	height: 200px;
+	margin-right: 2%;
+	margin-bottom: 30px;
+}
+
+.co-1{
+	width: 8%;
+}
+.co-2{
+	width: 18%;
+}
+.co-3{
+	width: 28%;
+}
+.co-4{
+	width: 38%;
+}
+.co-5{
+	width: 48%;
+}
+.co-6{
+	width: 58%;
+}
+.co-7{
+	width: 68%;
+}
+.co-8{
+	width: 78%;
+}
+.co-9{
+	width: 88%;
+}
+.co-10{
+	width: 98%;
+}
+
+.coh-2{
+	height: 400px;
+}
+.coh-10{
+	height: 800px;
+	float: right;
+}
+
+.co-ult{
+	margin-right: 0px;
+}
+
+.li-add{
+	padding-left: 30px !important;
+}
+.btn-add{
+	padding: 6px 12px !important;
+	text-align: left !important;
+}
+.normal-shadow{
+	box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+}
+.circle{
+	border-radius: 50%;
 }

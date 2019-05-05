@@ -228,7 +228,6 @@ a
 {
     text-decoration: none;
 
-    color: #5e72e4;
     background-color: transparent;
 
     -webkit-text-decoration-skip: objects;
@@ -2974,20 +2973,21 @@ fieldset:disabled a.btn
 .btn-primary
 {
     color: #fff;
-    border-color: #5e72e4;
-    background-color: #5e72e4;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    border-color: #6e69ff;
+    background-color: #6e69ff;
+    box-shadow: 0 2px 6px 0 rgba(110, 105, 255, 0.58);
 }
 .btn-primary:hover
 {
     color: #fff;
-    border-color: #5e72e4; 
-    background-color: #5e72e4;
+	border-color: #6e69ff;
+    background-color: #6e69ff;
+	box-shadow: 0 5px 10px rgba(110, 105, 255, 0.4) !important;
 }
 .btn-primary:focus,
 .btn-primary.focus
 {
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(94, 114, 228, .5);
+    box-shadow: 0 2px 6px 0 rgba(110, 105, 255, 0.58);
 }
 .btn-primary.disabled,
 .btn-primary:disabled
@@ -3004,12 +3004,56 @@ fieldset:disabled a.btn
     border-color: #5e72e4; 
     background-color: #324cdd;
 }
+
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus
 {
-    box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5);
+    box-shadow: 0 2px 6px 0 rgba(110, 105, 255, 0.58);
 }
+
+.btn-primary-light
+{
+    color: #fff;
+    border-color: #63abff;
+    background-color: #63abff;
+    box-shadow: 0 2px 6px 0 rgba(87, 162, 254, 0.58);
+}
+.btn-primary-light:hover
+{
+    color: #fff;
+    border-color: #63abff;
+    background-color: #63abff;
+    box-shadow: 0 5px 10px rgba(87, 162, 254, 0.4) !important;
+}
+.btn-primary-light:focus,
+.btn-primary-light.focus
+{
+    box-shadow: 0 2px 6px 0 rgba(87, 162, 254, 0.58);
+}
+.btn-primary-light.disabled,
+.btn-primary-light:disabled
+{
+    color: #fff;
+    border-color: #0076ff; 
+    background-color: #0076ff;
+}
+.btn-primary-light:not(:disabled):not(.disabled):active,
+.btn-primary-light:not(:disabled):not(.disabled).active,
+.show > .btn-primary-light.dropdown-toggle
+{
+    color: #fff;
+    border-color: #0076ff; 
+    background-color: #0076ff;
+}
+
+.btn-primary-light:not(:disabled):not(.disabled):active:focus,
+.btn-primary-light:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary-light.dropdown-toggle:focus
+{
+    box-shadow: 0 2px 6px 0 rgba(87, 162, 254, 0.58);
+}
+
 
 .btn-secondary
 {
@@ -4080,11 +4124,10 @@ input[type='button'].btn-block
     text-align: left;
 
     color: #525f7f;
-    border: 0 solid rgba(0, 0, 0, .15);
+    border: solid 1px rgba(0, 0, 0, .1);
     border-radius: .4375rem;
     background-color: #fff;
     background-clip: padding-box;
-    box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1);
 }
 
 .dropdown-menu-right
@@ -5263,11 +5306,9 @@ input[type='button'].btn-block
     font-size: 1.25rem;
     line-height: inherit;
 
-    display: inline-block;
+    display: inline-block;d
 
     margin-right: 1rem;
-    padding-top: .0625rem;
-    padding-bottom: .0625rem;
 
     white-space: nowrap;
 }
@@ -8005,7 +8046,7 @@ button.bg-danger:focus
 
 .bg-light
 {
-    background-color: #adb5bd !important;
+    background-color: #fff !important;
 }
 
 a.bg-light:hover,
@@ -8018,7 +8059,7 @@ button.bg-light:focus
 
 .bg-dark
 {
-    background-color: #212529 !important;
+    background-color: #313a46 !important;
 }
 
 a.bg-dark:hover,
@@ -15020,7 +15061,7 @@ button.bg-gray-dark:focus
 
 .bg-light
 {
-    background-color: #ced4da !important;
+    background-color: #fff !important;
 }
 
 a.bg-light:hover,
@@ -18205,7 +18246,6 @@ textarea[resize='horizontal']
     transition: box-shadow .15s ease; 
 
     border: 0;
-    box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 }
 .input-group-alternative .form-control,
 .input-group-alternative .input-group-text
@@ -18216,7 +18256,7 @@ textarea[resize='horizontal']
 
 .focused .input-group-alternative
 {
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08) !important;
+    /*box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08) !important;*/
 }
 
 .focused .input-group
@@ -18446,7 +18486,6 @@ textarea[resize='horizontal']
     transition: box-shadow .15s ease; 
 
     border: 0;
-    box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
 }
 .input-group-alternative .form-control,
 .input-group-alternative .input-group-text
@@ -18457,7 +18496,7 @@ textarea[resize='horizontal']
 
 .focused .input-group-alternative
 {
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08) !important;
+    /*box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08) !important;*/
 }
 
 .focused .input-group
@@ -18894,11 +18933,11 @@ textarea[resize='horizontal']
 
 .nav-link
 {
-    color: #525f7f;
+    color: #acb6cc;
 }
 .nav-link:hover
 {
-    color: #5e72e4;
+    color: #6e69ff;
 }
 .nav-link i.ni
 {
@@ -19003,7 +19042,7 @@ textarea[resize='horizontal']
 }
 .navbar-horizontal .navbar-brand img
 {
-    height: 30px;
+    height: auto;
 }
 
 .navbar-horizontal .navbar-dark .navbar-brand
@@ -19878,7 +19917,6 @@ textarea[resize='horizontal']
 .navbar-search .input-group
 {
     border: 2px solid;
-    border-radius: 2rem;
     background-color: transparent;
 }
 .navbar-search .input-group .input-group-text
@@ -19897,12 +19935,13 @@ textarea[resize='horizontal']
 
 .navbar-search-dark .input-group
 {
-    border-color: rgba(255, 255, 255, .6);
+    border: none;
+	background-color: #3c4655;
 }
 
 .navbar-search-dark .input-group-text
 {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(110, 105, 255, 1);
 }
 
 .navbar-search-dark .form-control
@@ -19929,12 +19968,13 @@ textarea[resize='horizontal']
 
 .navbar-search-light .input-group
 {
-    border-color: rgba(0, 0, 0, .6);
+    border: none;
+    background: #f1f3fa;
 }
 
 .navbar-search-light .input-group-text
 {
-    color: rgba(0, 0, 0, .6);
+    color: rgba(110, 105, 255, 1);
 }
 
 .navbar-search-light .form-control
