@@ -177,7 +177,7 @@
 				<!-- We'll fill this with dummy content -->
 			</div>
 			<div class="content co-3 coh-10 co-ult normal-shadow">
-				<!-- We'll fill this with dummy content -->awdawdawdawd
+				<!-- We'll fill this with dummy content -->
 			</div>
 			<div class="content co-3 normal-shadow">
 				<!-- We'll fill this with dummy content -->
