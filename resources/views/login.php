@@ -7,6 +7,7 @@
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
   <title>PartyPlanner - cu</title>
+  <link rel="stylesheet" href="css/main.css">
   <!-- Favicon -->
   <link href="css\argon-dashboard-master/assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
@@ -18,7 +19,7 @@
   <link type="text/css" href="css\argon-dashboard-master/assets/css/argon.css?v=1.0.0" rel="stylesheet">
 </head>
 
-<body class="bg-default">
+<body class="imgfundo">
   <div class="main-content">
 
 
@@ -55,7 +56,7 @@
 
 
     <!-- Header -->
-    <div class="header bg-gradient-primary py-7 py-lg-8">
+    <div class="header py-7 py-lg-8">
       <div class="separator separator-bottom separator-skew zindex-100">
       </div>
     </div>
@@ -102,7 +103,7 @@
                   </label>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary my-4">Entrar</button>
+                  <a href="home.php"><button type="button" class="btn btn-primary my-4">Entrar</button></a>
                 </div>
               </form>
             </div>
