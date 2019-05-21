@@ -140,7 +140,7 @@
 						</div>
 					</div>
 				</li>
-				<a href="lista.eventos.php">
+				<a href="#">
 					<li>
                     	<i class="far fa-user"></i>Seus eventos
                 	</li>
@@ -183,32 +183,63 @@
         </nav>
 		
 		<div id="page">
-			<div id="filtros">Algo</div>
+			<div id="filtros">Filtros</div>
 			<!-- Page Content -->
-			<div class="content co-3 coh-4 normal-shadow">
+			<div class="content co-2 coh-4 normal-shadow">
+				<div class="card">
+				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Meu evento</h5>
+				  </div>
+				</div>
 			</div>
-			<div class="content co-4 coh-4 normal-shadow">
+			<div class="content co-2 coh-4 normal-shadow">
+				<div class="card">
+				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Meu evento</h5>
+				  </div>
+				</div>
 			</div>
-			<div class="content co-3 coh-4 co-ult normal-shadow">
-				<!-- We'll fill this with dummy content -->
+			<div class="content co-2 coh-4 normal-shadow">
+				<div class="card">
+				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Meu evento</h5>
+				  </div>
+				</div>
 			</div>
-			<div class="content co-2 coh-2 normal-shadow">
-				<!-- We'll fill this with dummy content -->
+			<div class="content co-2 coh-4 normal-shadow">
+				<div class="card">
+				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Meu evento</h5>
+				  </div>
+				</div>
 			</div>
-			<div class="content co-2 coh-2 normal-shadow">
-				<!-- We'll fill this with dummy content -->
+			<div class="content co-2 coh-4 co-ult normal-shadow">
+				<div class="card">
+				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Meu evento</h5>
+				  </div>
+				</div>
 			</div>
-			<div class="content co-2 coh-2 normal-shadow">
-				<!-- We'll fill this with dummy content -->
+			<div class="content co-2 coh-4 normal-shadow">
+				<div class="card">
+				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Meu evento</h5>
+				  </div>
+				</div>
 			</div>
-			<div class="content co-2 coh-2 normal-shadow">
-				<!-- We'll fill this with dummy content -->
-			</div>
-			<div class="content co-2 coh-2 co-ult normal-shadow">
-				<!-- We'll fill this with dummy content -->
-			</div>
-			<div class="content co-5 coh-5 co-ult normal-shadow">
-				<!-- We'll fill this with dummy content -->
+			<div class="content co-2 coh-4 normal-shadow">
+				<div class="card">
+				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">Meu evento</h5>
+				  </div>
+				</div>
 			</div>
 		</div>
     </div>

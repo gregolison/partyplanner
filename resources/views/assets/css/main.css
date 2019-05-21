@@ -4,14 +4,13 @@
 }
 .wrapper {
     display: flex;
-    width: 100%;
     align-items: stretch;
 }
 .wrapper {
     display: flex;
     margin-top: 30px;
     align-items: stretch;
-    width: 95%;
+    width: 1800px;
     margin-left: auto;
     margin-right: auto;
     padding: 0px 15px;
@@ -21,6 +20,8 @@
     min-width: 250px;
     max-width: 250px;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 #sidebar.active {
     margin-left: -250px;
@@ -58,13 +59,13 @@ html{
 	height: 100%;
 }
 body {
-    font-family: 'Comfortaa';
-    background: #fafbfe;
+    font-family: 'Quicksand' !important;
+    background-color: #f1f3fa !important; /*#fafbfe*/
     height: 100%;
 }
 
 p {
-    font-family: 'Comfortaa';
+    font-family: 'Quicksand';
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -116,24 +117,24 @@ a, a:hover, a:focus {
 
 #sidebar ul p {
     color: #6c757d;
-    padding: 15px 30px 0px 30px;
+    padding: 15px 30px 15px 30px;
 	margin-bottom: 0px;
 	letter-spacing: .09em;
     font-size: 0.63rem;
     font-weight: bold;
 }
 #sidebar ul li{
-	padding: 30px 30px 0px 35px;
+	padding: 15px 30px 15px 35px;
 }
-#sidebar ul li a {
+#sidebar ul > a {
     font-size: 1.1em;
     display: block;
 }
-#sidebar ul li a i{
+#sidebar ul > a i{
     font-size: 1em;
 	margin-right: 13px;
 }
-#sidebar ul li a:hover {
+#sidebar ul > a:hover {
     color: #6e69ff;
 }
 
@@ -147,7 +148,7 @@ a, a:hover, a:focus {
 	padding: 30px 30px 0px 30px;
 }
 #sidebar .btn-inner--icon{
-    background: #8581ff;
+    /*background: #8581ff;*/
     padding: 1px 3.5px;
     margin-right: 10px;
 }
@@ -193,7 +194,7 @@ a, a:hover, a:focus {
 #page{
 	width: 100%;
 	margin: 0px 0px 0px 30px;
-	text-align: center;
+	text-align: left;
 }
 #page .content{
 	display: inline-block;
@@ -201,9 +202,9 @@ a, a:hover, a:focus {
 .content{
 	background: #fff;
 	border-radius: 0.3rem;
-	height: 200px;
 	margin-right: 2%;
 	margin-bottom: 30px;
+	float: left;
 }
 
 .co-1{
@@ -211,6 +212,9 @@ a, a:hover, a:focus {
 }
 .co-2{
 	width: 18%;
+}
+.co-25{
+	width: 23%;
 }
 .co-3{
 	width: 28%;
@@ -240,20 +244,50 @@ a, a:hover, a:focus {
 .coh-2{
 	height: 400px;
 }
+
+.coh-1{
+	height: 100px;
+}
+.coh-2{
+	height: 150px;
+}
+.coh-3{
+	height: 200px;
+}
+.coh-4{
+	height: 250px;
+}
+.coh-5{
+	height: 300px;
+}
+.coh-6{
+	height: 350px;
+}
+.coh-7{
+	height: 400px;
+}
+.coh-8{
+	height: 450px;
+}
+.coh-9{
+	height: 500px;
+}
 .coh-10{
-	height: 800px;
-	float: right;
+	height: 550px;
 }
 
 .co-ult{
 	margin-right: 0px;
 }
 
+.co-maior{
+	float: right;
+}
+
 .li-add{
 	padding-left: 30px !important;
 }
 .btn-add{
-	padding: 6px 12px !important;
 	text-align: left !important;
 }
 .normal-shadow{
@@ -261,4 +295,9 @@ a, a:hover, a:focus {
 }
 .circle{
 	border-radius: 50%;
+}
+
+#filtros{
+	margin: 20px 0px;
+	font-weight: bold;
 }

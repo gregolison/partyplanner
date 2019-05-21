@@ -7,16 +7,18 @@
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
   <title>PartyPlanner - cu</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  
   <!-- Favicon -->
-  <link href="css\argon-dashboard-master/assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <!-- Icons -->
-  <link href="css\argon-dashboard-master/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-  <link href="css\argon-dashboard-master/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <!-- Argon CSS -->
-  <link type="text/css" href="css\argon-dashboard-master/assets/css/argon.css?v=1.0.0" rel="stylesheet">
+  <link type="text/css" href="assets/css/argon.css?v=1.0.0" rel="stylesheet">
 </head>
 
 <body class="imgfundo">
@@ -27,7 +29,7 @@
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
         <a class="navbar-brand" href="#">
-          <img width="250px" src="img/outrologo2.png" />
+          <img width="250px" src="assets/img/outrologo2.png" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -38,7 +40,7 @@
             <div class="row">
               <div class="col-6 collapse-brand">
                 <a href="#">
-                  <img src="css\argon-dashboard-master/assets/img/brand/blue.png">
+                  <img src="assets/img/brand/blue.png">
                 </a>
               </div>
               <div class="col-6 collapse-close">
@@ -113,11 +115,11 @@
               </div>
               <div class="btn-wrapper text-center">
                 <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><img src="../assets/img/icons/common/github.svg"></span>
+                  <span class="btn-inner--icon"><img src="assets/img/icons/common/github.svg"></span>
                   <span class="btn-inner--text">Github</span>
                 </a>
                 <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
+                  <span class="btn-inner--icon"><img src="assets/img/icons/common/google.svg"></span>
                   <span class="btn-inner--text">Google</span>
                 </a>
               </div>
