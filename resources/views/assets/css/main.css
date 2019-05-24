@@ -325,18 +325,20 @@ a, a:hover, a:focus {
 	width: 200px;
 	height: 200px;
 	margin: auto;
-	border: solid 2px #fff;
+	background-color: #f1f3fa;
+	border: solid 8px #f1f3fa;
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
 .content-header .header-photo img{
-	width: auto;
+	border-radius: 0.5rem;
+	width: 100%;
 	height: 100%;
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 .content-header .header-photo:hover img{
-	filter: brightness(70%);
-	transition: all 0.2s;
+	filter: brightness(80%);
+	transition: all 0.1s;
 }
 
 .centralize{
