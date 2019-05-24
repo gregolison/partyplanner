@@ -26,7 +26,7 @@
 	<link type="text/css" href="assets/css/argon.css?v=1.0.0" rel="stylesheet">
 </head>
 <body>
-
+	
 	<?php include_once 'includes/include.navbar.php';?>
 
     <div class="wrapper">
@@ -34,65 +34,30 @@
         <?php include_once 'includes/include.menu.php';?>
 		
 		<div id="page">
-		
-		<div id="page">
-			<div id="filtros">Filtros</div>
+			<div id="filtros">Edição do evento</div>
 			<!-- Page Content -->
-			<div ondblclick="window.location.href = 'edita.eventos.php';" class="content co-2 photo normal-shadow">
-				<div class="card">
-				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Meu evento</h5>
-				  </div>
-				</div>
+			<div class="content co-3 normal-shadow">
+				<div class="content-header">
+					<div class="header-photo alternative-shadow">
+						<img src="assets/img/blog-neon-6.jpg">
+					</div>
+            	</div>
+            	<br clear="all">
+				<div class="col-lg-12">
+			        <div class="form-group">
+			            <label class="form-control-label" for="input-first-name">Nome</label>
+			            <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Meu evento">
+			        </div>
+			    </div>
+			    <div class="col-lg-12">
+			        <div class="form-group">
+			            <label class="form-control-label" for="input-first-name">Descrição</label>
+			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum ante quis nisi porttitor.</textarea>
+			        </div>
+			    </div>
 			</div>
-			<div ondblclick="window.location.href = 'edita.eventos.php';" class="content co-2 photo normal-shadow">
-				<div class="card">
-				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Meu evento</h5>
-				  </div>
-				</div>
-			</div>
-			<div ondblclick="window.location.href = 'edita.eventos.php';" class="content co-2 photo normal-shadow">
-				<div class="card">
-				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Meu evento</h5>
-				  </div>
-				</div>
-			</div>
-			<div ondblclick="window.location.href = 'edita.eventos.php';" class="content co-2 photo normal-shadow">
-				<div class="card">
-				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Meu evento</h5>
-				  </div>
-				</div>
-			</div>
-			<div ondblclick="window.location.href = 'edita.eventos.php';" class="content co-2 photo co-ult normal-shadow">
-				<div class="card">
-				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Meu evento</h5>
-				  </div>
-				</div>
-			</div>
-			<div ondblclick="window.location.href = 'edita.eventos.php';" class="content co-2 photo normal-shadow">
-				<div class="card">
-				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Meu evento</h5>
-				  </div>
-				</div>
-			</div>
-			<div ondblclick="window.location.href = 'edita.eventos.php';" class="content co-2 photo normal-shadow">
-				<div class="card">
-				  <img class="card-img-top" height="200px" src="assets/img/background.png" alt="Card image cap">
-				  <div class="card-body">
-				    <h5 class="card-title">Meu evento</h5>
-				  </div>
-				</div>
+			<div class="content co-7 coh-4 co-ult normal-shadow">
+				<!-- We'll fill this with dummy content -->
 			</div>
 		</div>
     </div>

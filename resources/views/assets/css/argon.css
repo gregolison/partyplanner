@@ -5842,7 +5842,7 @@ input[type='button'].btn-block
 
 .card-header
 {
-	margin-top: -80px;
+	/*margin-top: -80px;*/
     margin-bottom: 0;
     padding: 1.25rem 1.5rem;
 
@@ -18167,11 +18167,19 @@ textarea[resize='horizontal']
     transition: box-shadow .15s ease; 
 
     border: 0;
-    box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+    /*box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);*/
+}
+.form-control-alternative:hover
+{
+    background-color: #f7f8fc;
+    transition: background-color 0.2s; 
 }
 .form-control-alternative:focus
 {
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    /*box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);*/
+    box-shadow: none;
+    background-color: #ebeef9;
+    transition: background-color 0.2s;
 }
 
 .form-control-lg

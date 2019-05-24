@@ -205,6 +205,9 @@ a, a:hover, a:focus {
 	margin-right: 2%;
 	margin-bottom: 30px;
 	float: left;
+	box-sizing: border-box;
+    padding: 10px 30px;
+    line-height: 30px;
 }
 
 .co-1{
@@ -231,6 +234,9 @@ a, a:hover, a:focus {
 .co-7{
 	width: 68%;
 }
+.co-75{
+	width: 73%;
+}
 .co-8{
 	width: 78%;
 }
@@ -241,47 +247,55 @@ a, a:hover, a:focus {
 	width: 98%;
 }
 
-.coh-2{
-	height: 400px;
+.coh-05{
+	height: 50px;
 }
-
 .coh-1{
 	height: 100px;
 }
 .coh-2{
-	height: 150px;
-}
-.coh-3{
 	height: 200px;
 }
-.coh-4{
+.coh-25{
 	height: 250px;
 }
-.coh-5{
+.coh-3{
 	height: 300px;
 }
-.coh-6{
+.coh-35{
 	height: 350px;
 }
-.coh-7{
+.coh-4{
 	height: 400px;
 }
-.coh-8{
-	height: 450px;
-}
-.coh-9{
+.coh-5{
 	height: 500px;
 }
+.coh-6{
+	height: 600px;
+}
+.coh-7{
+	height: 700px;
+}
+.coh-8{
+	height: 800px;
+}
+.coh-9{
+	height: 900px;
+}
 .coh-10{
-	height: 550px;
+	height: 1000px;
 }
 
 .co-ult{
 	margin-right: 0px;
 }
 
-.co-maior{
+.co-direita{
 	float: right;
+}
+.photo{
+	padding: 0px !important;
 }
 
 .li-add{
@@ -300,4 +314,35 @@ a, a:hover, a:focus {
 #filtros{
 	margin: 20px 0px;
 	font-weight: bold;
+}
+
+.content-header {
+    padding: 20px 20px 0px;
+	height: 200px;
+	margin-bottom: 50px;
+}
+.content-header .header-photo {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	border: solid 2px #fff;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+.content-header .header-photo img{
+	width: auto;
+	height: 100%;
+	transition: all 0.2s;
+}
+.content-header .header-photo:hover img{
+	filter: brightness(70%);
+	transition: all 0.2s;
+}
+
+.centralize{
+	text-align: center;
+}
+
+.alternative-shadow{
+	box-shadow: 0 0 15px 0 rgba(154, 161, 171, 0.48);
 }
