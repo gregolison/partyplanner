@@ -38,7 +38,7 @@
 			<!-- Page Content -->
 			<div class="content co-3 normal-shadow">
 				<div class="content-header">
-					<div class="header-photo">
+					<div class="header-photo alternative-shadow">
 						<img src="assets/img/blog-neon-6.jpg">
 					</div>
             	</div>

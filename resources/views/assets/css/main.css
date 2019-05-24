@@ -325,8 +325,6 @@ a, a:hover, a:focus {
 	width: 200px;
 	height: 200px;
 	margin: auto;
-	background-color: #f1f3fa;
-	border: solid 8px #f1f3fa;
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
