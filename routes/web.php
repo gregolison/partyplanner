@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
+Route::view('cadastro', 'cadastro');
+Route::view('listagem', 'listagem');
+
+Route::get('servicos', 'ServicosController@list');
+Route::post('servicos', 'ServicosController@store');
+
+Route::get('organizador', 'OrganizadorController@list');
+Route::post('organizador', 'OrganizadorController@store');
