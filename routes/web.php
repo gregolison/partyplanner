@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::view('/', 'welcome');
 Route::view('cadastro', 'cadastro');
 Route::view('listagem', 'listagem');
