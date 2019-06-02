@@ -66,17 +66,17 @@
       <div class="row justify-content-center">
         <div border="solid black 1px" class="col-lg-5 col-md-7">
           <div class="card bg-secondary shadow border">
-            <div class="container">
+            <div style="height: 90px;" class="container">
               <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
-                  <div class="col-lg-5 col-md-6">
+                  <div style="position: relative; top: 25px;" class="col-lg-5 col-md-6">
                     <h1 class="text-primary2">Login</h1>
                     <p class="text-light2">Bem vindo!</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card-header bg-transparent pb-5">
+            <div style="padding-bottom: 1rem !important;" class="card-header bg-transparent pb-5">
               <div class="text-muted text-center mt-2 mb-3"><small>Entrar com sua conta PartyPlanner</small></div>
               <form role="form">
                 <div class="form-group mb-3">
@@ -106,7 +106,7 @@
                 </div>
               </form>
             </div>
-            <div class="card-body px-lg-5 py-lg-5">
+            <div style="padding-top: 1rem !important;" class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
                 <small>Entrar com:</small>
               </div>
@@ -122,7 +122,7 @@
               </div>
             </div>
           </div>
-          <div class="row mt-3">
+          <div style="position: relative; top: -15px;" class="row mt-3">
             <div class="col-6">
               <a href="#" class="text-primary"><small>Esqueceu sua senha?</small></a>
             </div>
