@@ -21,3 +21,9 @@ Route::post('servicos', 'ServicosController@store');
 
 Route::get('organizador', 'OrganizadorController@list');
 Route::post('organizador', 'OrganizadorController@store');
+
+Route::resource('categorias','CategoriaController');
+Route::get('categoria','CategoriaController@index');
+
+Route::resource('eventos','EventoController');
+Route::get('evento','EventoController@index');
