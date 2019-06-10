@@ -34,15 +34,15 @@ class servicoFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'O prenchimento é obrigatorio ',
-            'name.min' => 'Precisa de 5 caraceteres',
-            'email.required' => 'O prenchimento é obrigatorio',
-            'email.email'=> 'campo do tipo email',
-            'cnpj.required' => 'O prenchimento é obrigatorio',
-            'cnpj.min'=>'Precisa de 14 numeros',
-            'senha.required' => 'O prechimento é obrigatorio ',
-            'senha.min' => 'No minimo 8 caracteres',
-            'senha.max' =>'no maximo 16 caracteres'
+            'name.required' => 'O nome é obrigatorio ',
+            'name.min' => 'O noem precisa conter no mínimo 5 caraceteres',
+            'email.required' => 'O email é obrigatorio',
+            'email.email'=> 'O email precisa ser um email válido',
+            'cnpj.required' => 'O CNPJ é obrigatorio',
+            'cnpj.min'=>'Precisa de no mínimo 14 digitos',
+            'senha.required' => 'A senha é obrigatoria ',
+            'senha.min' => 'A senha deve ter minimo 8 caracteres',
+            'senha.max' =>'A senha deve ter no máximo 16 caracteres'
         ];
     }
 }
