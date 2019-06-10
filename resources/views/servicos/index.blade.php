@@ -19,6 +19,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Cnpj</th>
+                <th scope="col">Categoria</th>
                 <th scope="col">Ação</th>
             </tr>
         </thead>
@@ -28,6 +29,7 @@
                 <th scope="row">{{$servico->id}}</th>
                 <td>{{$servico->name}}</td>
                 <td>{{$servico->cnpj}}</td>
+                <td>{{$servico->categoria}}</td>
                 <td>  
                     <a href="">Editar</a> |
                     <a href="">Vizualizar</a>

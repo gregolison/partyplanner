@@ -46,9 +46,9 @@
                     <label for="categoria">Categoria</label>
                     <select name='categoria' id='categoria' class='form-control'>
                         <option value='' disabled selected>Selecione a categoria de seu serviço</option>
-                        <option value='segurança'>Segurança</option>
-                        <option value='decoração'>Decoração</option>
-                        <option value='alimentício'>Alimentos e Bebidas</option>
+                        <option value='Segurança'>Segurança</option>
+                        <option value='Decoração'>Decoração</option>
+                        <option value='Alimentício'>Alimentos e Bebidas</option>
                     </select>
                 </div>
                  @if (isset($errors) && count( $errors) > 0)
