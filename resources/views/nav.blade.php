@@ -3,7 +3,7 @@
           <a class="nav-link active" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="servicos">Serviços</a>
+          <a class="nav-link" href="{{route('servicos.index')}}">Serviços</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="organizador">Organizadores</a>
