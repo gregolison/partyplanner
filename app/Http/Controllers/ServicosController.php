@@ -2,42 +2,106 @@
 
 namespace App\Http\Controllers;
 
-use \App\Servico;
+use App\Servico;
 use Illuminate\Http\Request;
+use App\Http\Requests\servicoFormRequest;
 
 class ServicosController extends Controller
 {
-    public function list()
+    public function __construct(servico $serv){
+        $this->servicoConstruct = $serv;
+
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-       
-        $servicos = Servico::all();
-
-        
-
-        return view('internals/servicos', [
-            'servicos' => $servicos,
-        ]);
+        $servicos = $this->servicoConstruct->all();
+        return view('servicos.index', compact('servicos'));
     }
 
-    public function store()
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
+        return view('servicos.create');
+    }
 
-        $data = request()->validate([
-            'name' => 'required|min:5',
-            'email' => 'required|email',
-            'cnpj' => 'required|min:14',
-            'senha' => 'required|min:8|max:16'
-        ]);
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(servicoFormRequest $request)
+    {
+        $CadServico = $request->all();
+       // $rules = $this->Servico->rules;
+        /*$validate = validator($CadServico, $this->Servico->rules, $mensagens);
+        if($validate->fails()){
+            return redirect()       
+                ->route('servico.create')
+                ->withErrors($validate)
+                ->withInput();
 
+            }*/
 
-        $servico = new Servico();
-        $servico->name = request('name');
-        $servico->email = request('email');
-        $servico->cnpj = request('cnpj');
-        $servico->senha = request('senha');
-        $servico->categoria = request('categoria');
-        $servico->save();
-        return back();
+        $cadastrado =  $this->servicoConstruct->create($CadServico);
 
+        if($cadastrado)
+            return 'cadastrado';
+        else
+            return view('internals.servicos');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }
