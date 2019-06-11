@@ -27,11 +27,11 @@
 </head>
 <body>
 	
-	<?php include_once '../includes/include.navbar.php';?>
+	<?php include_once '../includes/navbar.blade.php';?>
 
     <div class="wrapper">
 
-        <?php include_once '../includes/include.menu.php';?>
+        <?php include_once '../includes/menu.blade.php';?>
 		
 		<div id="page">
 			<div id="filtros">Edição do evento</div>

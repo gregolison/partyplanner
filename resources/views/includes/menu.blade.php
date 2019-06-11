@@ -20,40 +20,32 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            
-                            <div class="modal-body">
-                              
-                                <div class="form-group">
-                                                <div class="input-group input-group-alternative">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                                                    </div>
-                                                    <input class="form-control" placeholder="Nome do evento" type="text">
-                                                </div>
-                                            </div>
-                                
-                            </div>
-                            
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                                <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button> 
-                            </div>
+                            <form action="{{ route('eventos.store') }}" method="post">
+								<div class="modal-body">
+								
+									<div class="form-group">
+													<div class="input-group input-group-alternative">
+														@csrf
+														<div class="input-group-prepend">
+															<span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+														</div>
+														<input class="form-control" name="nome" placeholder="Nome do evento" type="text">
+													</div>
+												</div>
+									
+								</div>
+								
+								<div class="modal-footer">
+									<input type="submit" class="btn btn-primary" value="Save changes">
+									<button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button> 
+								</div>
+							</form>
                             
                         </div>
 							</div>
 						</div>
 					</div>
 				</li>
-				<a href="lista.eventos.php">
-					<li>
-                    	<i class="far fa-user"></i>Seus eventos
-                	</li>
-                </a>
-                <a href="#">
-					<li>
-                    	<i class="fab fa-slideshare"></i>Compartilhados
-                	</li>
-                </a>
 			</ul>
             <ul class="list-unstyled components">
                 <p>NAVIGATION</p>
@@ -67,10 +59,10 @@
 	                    <i class="far fa-user"></i>Profile
 	                </li>
                 </a>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                <!--<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
 	                <li>
 	                    <i class="far fa-copy"></i>Pages
-	                    <!--<ul class="collapse list-unstyled" id="pageSubmenu">
+	                    <ul class="collapse list-unstyled" id="pageSubmenu">
 	                        <li>
 	                            <a href="#">Page 1</a>
 	                        </li>
@@ -80,8 +72,18 @@
 	                        <li>
 	                            <a href="#">Page 3</a>
 	                        </li>
-	                    </ul>-->
+	                    </ul>
 	                </li>
+                </a>-->
+				<a href="{{route('eventos.index')}}">
+					<li>
+                    	<i class="far fa-user"></i>Seus eventos
+                	</li>
+                </a>
+                <a href="{{route('eventos.index')}}">
+					<li>
+                    	<i class="fab fa-slideshare"></i>Compartilhados
+                	</li>
                 </a>
             </ul>
         </nav>

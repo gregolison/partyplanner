@@ -15,7 +15,7 @@ class EventoController extends Controller
     {
         $eventos = Evento::all();
 
-        return view('evento', compact('eventos'));
+        return view('eventos', compact('eventos'));
     }
 
     /**
@@ -25,7 +25,7 @@ class EventoController extends Controller
      */
     public function create()
     {
-        return view('evento');
+        return view('eventos.create');
     }
 
     /**

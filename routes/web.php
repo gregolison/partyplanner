@@ -12,12 +12,15 @@
 */
 
 
-Route::view('/', 'welcome');
+Route::view('/', 'home');
 Route::view('cadastro', 'cadastro');
 Route::view('listagem', 'listagem');
 //antigas rotas de serviços que são gay
 //Route::get('servicos', 'ServicosController@create');
 //Route::post('servicos', 'ServicosController@store');
+
+//Route::get('eventos', 'EventoController@create');
+//Route::post('eventos.store', 'EventoController@store');
 
 // Nova rota de serviços, reduzindo o codigo sidi gay
 Route::resource('/internals/servicos', 'ServicosController');
