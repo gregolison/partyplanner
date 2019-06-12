@@ -173,7 +173,7 @@ a, a:hover, a:focus {
 	color: #6e69ff !important;
 }
 .navbar{
-	width: 95%;
+	width: 1800px;
 	padding: 0.5rem 15px !important;
 	margin-left: auto;
 	margin-right: auto;
@@ -304,6 +304,9 @@ a, a:hover, a:focus {
 .btn-add{
 	text-align: left !important;
 }
+.btn-icon i{
+	font-size: 16px;
+}
 .normal-shadow{
 	box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
 }
@@ -311,9 +314,10 @@ a, a:hover, a:focus {
 	border-radius: 50%;
 }
 
-#filtros{
-	margin: 20px 0px;
+.filtros{
+	margin: 0px 0px 20px 0px;
 	font-weight: bold;
+	line-height: 43px;
 }
 
 .content-header {
@@ -345,4 +349,15 @@ a, a:hover, a:focus {
 
 .alternative-shadow{
 	box-shadow: 0 0 15px 0 rgba(154, 161, 171, 0.48);
+}
+
+.float-right{
+	float: right;
+}
+
+.simple-margin-right{
+	margin-right: 2%;
+}
+.no-margin-right{
+	margin-right: 0px !important;
 }

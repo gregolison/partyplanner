@@ -5,7 +5,7 @@
 				<div class="header-nome">Grégori Poloni</div>
             </div>
     		<ul class="list-unstyled components">
-				<li class="active li-add">
+				<!--<li class="active li-add">
 					<div>
 					  <button type="button" class="btn btn-block waves-effect waves-light btn-primary-alternative btn-add" data-toggle="modal" data-target="#modal-form"><span class="circle btn-inner--icon"><i class="ni ni-fat-add"></i></span>
 	
@@ -45,7 +45,7 @@
 							</div>
 						</div>
 					</div>
-				</li>
+				</li>-->
 			</ul>
             <ul class="list-unstyled components">
                 <p>NAVIGATION</p>

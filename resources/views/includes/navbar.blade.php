@@ -1,7 +1,7 @@
 <div class="navigation normal-shadow bg-light">
 	<nav class="navbar navbar-horizontal navbar-expand-lg">
 		<div class="container container-menu">
-			<a class="navbar-brand" href="home.php"><img src="assets/img/outrologo2.png"/></a>
+			<a class="navbar-brand" href="home.php"><img src="{{URL::asset('/img/outrologo2.png')}}"/></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
