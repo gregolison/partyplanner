@@ -4,10 +4,10 @@
 
 @section('content')       
 <h1 class="text-center mb-3">Listagem de categorias</h1>
-    <form class="form-horizontal" method="" action=""> 
+    <form  action="{{ route('search') }}" method="GET" class="form-horizontal"> 
         <div class="form-group row mb-4"> 
             <div class="col-10">
-                <input class="form-control" type="text" placeholder="Pesquisar Categoria">
+            <input type="text" name="query" id="query" value="{{ request()->input('query') }}" class="search-box" placeholder="Procura por serviço" required>
             </div> 
             <button type="submit" class="btn btn-dark"><i class="fa fa-search"></i> Pesquisar</button>
         </div>

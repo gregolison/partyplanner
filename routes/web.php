@@ -15,6 +15,8 @@
 Route::view('/', 'home');
 Route::view('cadastro', 'cadastro');
 Route::view('listagem', 'listagem');
+
+Route::get('/procurarservico', 'PesquisaServicoController@search')->name('search');
 //antigas rotas de serviços que são gay
 //Route::get('servicos', 'ServicosController@create');
 //Route::post('servicos', 'ServicosController@store');
