@@ -31,7 +31,10 @@
                 <td>  
                     <a href="">Editar</a> |
                     <a href="">Vizualizar</a>
-                </td>     
+                </td>   
+                <td>
+                    <a href=""> + </a>
+                </td>  
             </tr>
         @endforeach  
         </tbody>
