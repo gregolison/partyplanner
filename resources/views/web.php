@@ -32,3 +32,5 @@ Route::get('categoria','CategoriaController@index');
 
 Route::resource('eventos','EventoController');
 //Route::get('evento','EventoController@index');
+
+Route::post('/quadro/{id}', 'QuadroController');
