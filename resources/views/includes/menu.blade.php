@@ -4,8 +4,8 @@
 				</div>
 				<div class="header-nome">Grégori Poloni</div>
             </div>
-    		<ul class="list-unstyled components">
-				<!--<li class="active li-add">
+    		<!--<ul class="list-unstyled components">
+				<li class="active li-add">
 					<div>
 					  <button type="button" class="btn btn-block waves-effect waves-light btn-primary-alternative btn-add" data-toggle="modal" data-target="#modal-form"><span class="circle btn-inner--icon"><i class="ni ni-fat-add"></i></span>
 	
@@ -45,18 +45,18 @@
 							</div>
 						</div>
 					</div>
-				</li>-->
-			</ul>
+				</li>
+			</ul>-->
             <ul class="list-unstyled components">
                 <p>NAVIGATION</p>
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
 	                <li class="active">
-	                    <i class="far fa-newspaper"></i>Home
+	                    <i class="far fa-newspaper"></i><span>Home</span>
 	                </li>
                 </a>
                 <a href="#">
 	                <li>
-	                    <i class="far fa-user"></i>Profile
+	                    <i class="far fa-user"></i><span>Profile</span>
 	                </li>
                 </a>
                 <!--<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
@@ -77,12 +77,22 @@
                 </a>-->
 				<a href="{{route('eventos.index')}}">
 					<li>
-                    	<i class="far fa-user"></i>Seus eventos
+                    	<i class="far fa-user"></i><span>Seus eventos</span>
                 	</li>
                 </a>
                 <a href="{{route('eventos.index')}}">
 					<li>
-                    	<i class="fab fa-slideshare"></i>Compartilhados
+                    	<i class="fab fa-slideshare"></i><span>Compartilhados</span>
+                	</li>
+                </a>
+				<a id="encolheMenu">
+					<li>
+                    	<i style="transform: rotate(180deg);" class="fas fa-angle-right"></i>
+                	</li>
+                </a>
+				<a id="expandeMenu" style="display: none">
+					<li>
+                    	<i class="fas fa-angle-right"></i>
                 	</li>
                 </a>
             </ul>
