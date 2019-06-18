@@ -21,6 +21,7 @@
                 <th scope="col">Cnpj</th>
                 <th scope="col">Categoria</th>
                 <th scope="col">Ação</th>
+                <th scope="col">Adicionar</th>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +34,10 @@
                 <td>  
                     <a href="">Editar</a> |
                     <a href="">Vizualizar</a>
-                </td>     
+                </td> 
+                <td>
+                    <a href="/quadro/{{$servico->id}}"> + </a>
+                </td>      
             </tr>
         @endforeach  
         </tbody>

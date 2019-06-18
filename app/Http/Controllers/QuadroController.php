@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Quadro;
+use App\Servico;
 use Illuminate\Http\Request;
 
 class QuadroController extends Controller
@@ -13,9 +14,6 @@ class QuadroController extends Controller
      */
     public function index()
     {
-        $servicos = Servico::id();
-
-        return view('quadro', compact('servicos'));
     }
 
     /**
@@ -36,8 +34,6 @@ class QuadroController extends Controller
      */
     public function store(Request $request)
     {
-
-        return redirect('/quadro')->with('success', 'Quadro is successfully saved');
     }
 
     /**
@@ -46,9 +42,11 @@ class QuadroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($servico)
     {
-        //
+        $servico = Servico::find($servico);
+
+        return view('quadro');  
     }
 
     /**
@@ -69,9 +67,8 @@ class QuadroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $servico)
     {
-        //
     }
 
     /**
