@@ -1,6 +1,7 @@
-<nav id="sidebar" class="normal-shadow">
+<nav id="sidebar" class="minimized normal-shadow">
             <div class="sidebar-header">
 				<div class="header-photo circle">
+					<img src="{{asset('img/fotosPerfil/minha_foto_teste.jpg')}}"/>
 				</div>
 				<div class="header-nome">Grégori Poloni</div>
             </div>
@@ -51,12 +52,12 @@
                 <p>NAVIGATION</p>
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
 	                <li class="active">
-	                    <i class="far fa-newspaper"></i><span>Home</span>
+	                    <i class="far fa-newspaper"></i><span>Página incial</span>
 	                </li>
                 </a>
                 <a href="#">
 	                <li>
-	                    <i class="far fa-user"></i><span>Profile</span>
+	                    <i class="far fa-user"></i><span>Seu perfil</span>
 	                </li>
                 </a>
                 <!--<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
@@ -85,15 +86,11 @@
                     	<i class="fab fa-slideshare"></i><span>Compartilhados</span>
                 	</li>
                 </a>
-				<a id="encolheMenu">
-					<li>
-                    	<i style="transform: rotate(180deg);" class="fas fa-angle-right"></i>
-                	</li>
-                </a>
-				<a id="expandeMenu" style="display: none">
-					<li>
+				<button id="encolheMenu" class="btn-diferente" style="display: none">
+						<i class="fas fa-angle-left"></i>
+				</button>
+				<button id="expandeMenu" class="btn-diferente">
                     	<i class="fas fa-angle-right"></i>
-                	</li>
-                </a>
+				</button>
             </ul>
         </nav>

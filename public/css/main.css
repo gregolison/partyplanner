@@ -16,11 +16,6 @@
     padding: 0px 15px;
 }
 
-#sidebar {
-    width: 250px;
-	min-height: 100vh;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 #sidebar.active {
@@ -79,8 +74,9 @@ a, a:hover, a:focus {
     background: white;
     color: inherit;
 	border-top-left-radius: 0.3rem;
-    border-top-right-radius: 0.3rem;
-    transition: all 0.3s;
+	border-top-right-radius: 0.3rem;
+	width: 250px;
+	min-height: 100vh;
 }
 
 #sidebar .sidebar-header {
@@ -96,8 +92,14 @@ a, a:hover, a:focus {
 	height: 74px;
 	margin: auto;
 	border: solid 2px #fff;
-	background-image: url('../img/noimage4.png');
+	/*background-image: url('../img/noimage4.png');*/
 	background-size: 100% 100%;
+}
+#sidebar .header-photo img{
+	width: 100%;
+	height: 100%;;
+	border-radius: 50px;
+	margin: 0px;
 }
 #sidebar .header-nome {
 	text-align: center;
@@ -117,14 +119,14 @@ a, a:hover, a:focus {
 	margin-bottom: 0px;
 	letter-spacing: .09em;
     font-size: 0.63rem;
-    font-weight: bold;
+	font-weight: bold;
 }
 #sidebar ul li{
 	padding: 15px 30px 15px 35px;
 }
 #sidebar ul > a {
     font-size: 1.1em;
-    display: block;
+	display: block;
 }
 #sidebar ul > a i{
     font-size: 1em;
@@ -143,6 +145,10 @@ a, a:hover, a:focus {
 #sidebar ul ul li{
 	padding: 30px 30px 0px 30px;
 }
+#sidebar ul button{
+	font-size: 1.3em;
+	margin: 15px 30px 15px 35px;
+}
 #sidebar .btn-inner--icon{
     /*background: #8581ff;*/
     padding: 1px 3.5px;
@@ -151,7 +157,6 @@ a, a:hover, a:focus {
 
 #sidebar.minimized{
 	width: auto;
-	transition: all 0.2s;
 }
 #sidebar.minimized .sidebar-header{
 	height: auto;
@@ -177,6 +182,10 @@ a, a:hover, a:focus {
 #sidebar.minimized .list-unstyled li i{
 	font-size: 1.3em;
 	margin-right: 0px;
+}
+#sidebar.minimized ul button{
+	margin: 15px 25px 15px 25px;
+	font-size: 1.3em;
 }
 .navigation{
 	width: 100%;
@@ -332,6 +341,25 @@ a, a:hover, a:focus {
 }
 .btn-icon i{
 	font-size: 16px;
+}
+.btn-diferente{
+	padding: 5px 12px;
+	border: none;
+	background-color: transparent;
+	color: #525f7f;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	outline: none;
+}
+.btn-diferente:hover{
+	background-color: rgba(103,117,176,0.15);
+}
+.btn-diferente:active{
+	outline: none;
+	background-color: rgba(131,141,184,0.25);
+}
+.btn-diferente:active{
+	outline: none;
 }
 .normal-shadow{
 	box-shadow: 0 0 35px 0 rgba(154,161,171,.15);

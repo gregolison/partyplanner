@@ -25,15 +25,18 @@
                                 </button>
                             </div>
                             <form action="{{ route('eventos.store') }}" method="post">
-								<div class="modal-body">
+								<div class="modal-body" style="padding: 0 1.5rem 1.5rem 1.5rem;">
 									@csrf
+									<div>
+										<small>Nome</small>
+									</div>
 									<input class="form-control form-control-alternative" name="nome" placeholder="Nome do evento" type="text">
 									
 								</div>
 								
 								<div class="modal-footer">
-									<input type="submit" class="btn btn-primary" value="Save changes">
-									<button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button> 
+									<input type="submit" class="btn btn-primary" value="Criar evento">
+									<button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button> 
 								</div>
 							</form>
                             
