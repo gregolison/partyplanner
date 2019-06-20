@@ -35,3 +35,6 @@ Route::get('categoria','CategoriaController@index');
 
 Route::resource('eventos','EventoController');
 Route::get('evento','EventoController@index');
+
+Route::get('quadro/{servico}/1','QuadroController@show');
+Route::resource('quadro','QuadroController');

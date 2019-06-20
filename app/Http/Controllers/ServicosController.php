@@ -30,7 +30,7 @@ class ServicosController extends Controller
      */
     public function create()
     {
-        return view('servicos.create');
+        return view('index');
     }
 
     /**
