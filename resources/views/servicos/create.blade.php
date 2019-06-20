@@ -16,32 +16,32 @@
                     <label for="name">Nome</label>
                     <input type="text" name='name' value="{{ old('name') }}" class='form-control'>
                 </div>
-                @if (isset($errors) && count( $errors) > 0)
-                    <div class="alert alert-danger" role="alert">{{ $errors->first('name') }}</div>
-                @endif
-                    
+                @error('name')
+                     <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                @enderror  
                
                 <div class="form-group pb-2">
                     <label for="email">Email</label>
                     <input type="email" name='email' value="{{ old('email') }}" class='form-control'>
                 </div>
-                @if (isset($errors) && count( $errors) > 0)
-                    <div class="alert alert-danger" role="alert">{{ $errors->first('email') }}</div>
-                @endif             
+                @error('email')
+                     <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                @enderror
+                             
                 <div class="form-group pb-2">
                     <label for="cnpj">CNPJ</label>
                     <input type="text" name='cnpj' value="{{ old('cnpj') }}" class='form-control'>
                 </div>
-                @if (isset($errors) && count( $errors) > 0)
-                    <div class="alert alert-danger" role="alert">{{ $errors->first('cnpj') }}</div>
-                @endif
+                @error('cnpj')
+                     <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                @enderror
                 <div class="form-group pb-2">
                     <label for="senha">Senha</label>
                     <input type="password" name='senha' value="{{ old('senha') }}" class='form-control'>
                 </div>
-                 @if (isset($errors) && count( $errors) > 0)
-                    <div class="alert alert-danger" role="alert">{{ $errors->first('senha') }}</div>
-                @endif
+                @error('senha')
+                     <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                @enderror
                 <div class="form-group pb-2">
                     <label for="categoria">Categoria</label>
                     <select name='categoria' id='categoria' class='form-control'>
@@ -51,9 +51,9 @@
                         <option value='Alimentício'>Alimentos e Bebidas</option>
                     </select>
                 </div>
-                 @if (isset($errors) && count( $errors) > 0)
-                    <div class="alert alert-danger" role="alert">{{ $errors->first('categoria') }}</div>
-                @endif
+                @error('categoria')
+                     <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                @enderror
                 <button type='submit' class='btn btn-primary'>Cadastrar</button>
 
                 @csrf

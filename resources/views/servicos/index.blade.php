@@ -7,7 +7,7 @@
     <form  action="{{ route('search') }}" method="GET" class="form-horizontal"> 
         <div class="form-group row mb-4"> 
             <div class="col-10">
-            <input type="text" name="query" id="query" value="{{ request()->input('query') }}" class="search-box" placeholder="Procura por serviço" required>
+            <input type="text" name="query" id="query" value="{{ request()->input('query') }}" class="search-box" placeholder="Procura por serviço" >
             </div> 
             <button type="submit" class="btn btn-dark"><i class="fa fa-search"></i> Pesquisar</button>
         </div>

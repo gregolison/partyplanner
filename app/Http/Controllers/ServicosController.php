@@ -55,9 +55,9 @@ class ServicosController extends Controller
         $cadastrado =  $this->servicoConstruct->create($CadServico);
 
         if($cadastrado)
-            return 'cadastrado';
+            return redirect()->route('servicos.index');
         else
-            return view('internals.servicos');
+            return view('servicos.create');
     }
 
     /**
