@@ -14,6 +14,9 @@ $(function() {
 	  $('#sidebar .list-unstyled li i').css('fontSize', '1.3em');
 	  $('#sidebar .list-unstyled li i').css('margin-right', '0px');*/
 	  $('#sidebar').addClass('minimized');
+	  $( "#sidebar" ).animate({
+		width: "83px"
+	  }, 50);
 	  $('#encolheMenu').hide();
 	  $('#expandeMenu').show();
   });
@@ -33,7 +36,10 @@ $(function() {
 	  $('#sidebar .list-unstyled li i').css('margin-right', '13px');
 	  $('#sidebar .list-unstyled li i').css('transition', 'all 0.2s');*/
 	  $('#sidebar').removeClass('minimized');
+	  $( "#sidebar" ).animate({
+		width: "250px"
+	  }, 50);
 	  $('#expandeMenu').hide();
 	  $('#encolheMenu').show();
-  });
+	});
 });

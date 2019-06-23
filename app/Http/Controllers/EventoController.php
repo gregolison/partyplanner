@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 use App\Evento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facedes\input;
+use response;
+use App\http\Requests;
 
 class EventoController extends Controller
 {
@@ -41,7 +44,7 @@ class EventoController extends Controller
         ]);
         $evento = Evento::create($validatedData);
 
-        return redirect('/eventos')->with('success', 'Evento is successfully saved');
+        return response()->json(['nome' => $validatedData['nome']]);
     }
 
     /**

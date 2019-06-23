@@ -24,19 +24,18 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <form action="{{ route('eventos.store') }}" method="post">
+                            <form>
 								<div class="modal-body" style="padding: 0 1.5rem 1.5rem 1.5rem;">
-									@csrf
 									<div>
 										<small>Nome</small>
 									</div>
-									<input class="form-control form-control-alternative" name="nome" placeholder="Nome do evento" type="text">
+									<input class="form-control form-control-alternative" name="nome" id="nome" placeholder="Nome do evento" type="text">
 									
 								</div>
 								
 								<div class="modal-footer">
-									<input type="submit" class="btn btn-primary" value="Criar evento">
-									<button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button> 
+									<button id="cadastrarEvento" type="button" class="btn btn-primary">Criar evento</button>
+									<button id="cancelarCadastro" type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button> 
 								</div>
 							</form>
                             
@@ -77,7 +76,8 @@
 					</div>
 					<div class="filtros">Seus eventos</div>
 			<!-- Page Content -->
-			@foreach($eventos as $evento)
+			<div id="eventos">
+			@foreach($eventos->reverse(); as $evento)
 			<div ondblclick="{{$evento->id}}" class="content co-2 photo normal-shadow">
 				<div class="card">
 				  <img class="card-img-top" height="200px" src="{{URL::asset('/img/background.png')}}" alt="Card image cap">
@@ -87,6 +87,41 @@
 				</div>
 			</div>
       @endforeach
+	  </div>
 		</div>
     </div>
+
+	<script type="text/javascript">
+	
+	$(function() {
+		$('#cadastrarEvento').on('click', function(){
+			var nome = $('#nome').val();
+			
+			$.ajax({
+				url: "cadastraEvento",
+				method: 'get',
+				data: {'nome': nome},
+				dataType: 'json',
+				success:function(data) {
+					$('#eventos').prepend(
+						$('<div>', {class: 'content co-2 photo normal-shadow'}).append(
+							$('<div>', {class: 'card'}).append(
+								$('<img>', {class: 'card-img-top', height: '200px', src: "{{URL::asset('/img/background.png')}}"}),
+								$('<div>', {class: 'card-body'}).append(
+									$('<h5>', {class: 'card-title', html: data.nome})
+								),
+								$('<div>', {class: 'novoEvento', html: 'N'})
+							)
+						)
+					);
+					$('#cancelarCadastro').click();
+				}
+			})
+		});
+		$('#cancelarCadastro').on('click', function(){
+			$('#nome').val('');
+		});
+	});
+
+	</script>
 @endsection
