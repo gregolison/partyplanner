@@ -24,25 +24,10 @@ class servicoFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:5',
-            'email' => 'required|email',
-            'cnpj' => 'required|min:14',
+            'name' => 'required|min:5|max:190',
+            'email' => 'required|email|max:190',
+            'cnpj' => 'required|min:14|max:190',
             'senha' => 'required|min:8|max:16'
-        ];
-    }
-    
-    public function messages()
-    {
-        return [
-            'name.required' => 'O nome é obrigatorio ',
-            'name.min' => 'O noem precisa conter no mínimo 5 caraceteres',
-            'email.required' => 'O email é obrigatorio',
-            'email.email'=> 'O email precisa ser um email válido',
-            'cnpj.required' => 'O CNPJ é obrigatorio',
-            'cnpj.min'=>'Precisa de no mínimo 14 digitos',
-            'senha.required' => 'A senha é obrigatoria ',
-            'senha.min' => 'A senha deve ter minimo 8 caracteres',
-            'senha.max' =>'A senha deve ter no máximo 16 caracteres'
         ];
     }
 }
