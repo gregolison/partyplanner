@@ -110,7 +110,9 @@
 								$('<div>', {class: 'card-body'}).append(
 									$('<h5>', {class: 'card-title', html: data.nome})
 								),
-								$('<div>', {class: 'novoEvento', html: 'N'})
+								$('<div>', {class: 'novoEvento'}).append(
+									$('<i>', {class: 'fas fa-bell'})
+								)
 							)
 						)
 					);
