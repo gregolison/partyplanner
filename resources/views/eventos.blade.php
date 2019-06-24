@@ -50,7 +50,7 @@
         	
             <div class="modal-header">
                 <h6 class="modal-title" id="modal-title-notification">Your attention is required</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button id="cancelarCadastroMini" type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
@@ -95,6 +95,7 @@
 	
 	$(function() {
 		$('#cadastrarEvento').on('click', function(){
+			$('#cadastrarEvento').attr('disabled', '');
 			var nome = $('#nome').val();
 			
 			$.ajax({
@@ -105,17 +106,20 @@
 				success:function(data) {
 					$('#eventos').prepend(
 						$('<div>', {class: 'content co-2 photo normal-shadow'}).append(
-							$('<div>', {class: 'card'}).append(
+							$('<div>', {class: 'card'}).on('mouseover', function(){
+								if ($(this).children('.novoEvento') != null) {
+									$(this).children('.novoEvento').fadeOut();
+								}
+							}).append(
 								$('<img>', {class: 'card-img-top', height: '200px', src: "{{URL::asset('/img/background.png')}}"}),
 								$('<div>', {class: 'card-body'}).append(
 									$('<h5>', {class: 'card-title', html: data.nome})
 								),
-								$('<div>', {class: 'novoEvento'}).append(
-									$('<i>', {class: 'fas fa-bell'})
-								)
+								$('<div>', {class: 'novoEvento', html: 'NOVO'})
 							)
-						)
+						).hide().fadeIn("slow")
 					);
+					$('#cadastrarEvento').removeAttr('disabled', '');
 					$('#cancelarCadastro').click();
 				}
 			})

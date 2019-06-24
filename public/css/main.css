@@ -418,7 +418,8 @@ a, a:hover, a:focus {
 }
 .novoEvento{
 	position: absolute;
-    width: 30px;
+	padding: 0px 5px;
+    min-width: 30px;
     height: 30px;
     text-align: center;
     line-height: 30px;
@@ -427,6 +428,6 @@ a, a:hover, a:focus {
     right: -10px;
     top: -10px;
 	color: white;
-	font-size: 13px;
+	font-size: 10px;
 	font-weight: bold;
 }
