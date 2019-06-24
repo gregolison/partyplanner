@@ -43,8 +43,9 @@ class EventoController extends Controller
             'nome' => 'required|max:255',
         ]);
         $evento = Evento::create($validatedData);
+		$id = $evento['id'];
 
-        return response()->json(['nome' => $validatedData['nome']]);
+        return response()->json(['id' => $id, 'nome' => $validatedData['nome']]);
     }
 
     /**
@@ -66,7 +67,7 @@ class EventoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $evento = Evento::findOrFail($id); return view('quadro', compact('evento'));
     }
 
     /**
@@ -83,7 +84,7 @@ class EventoController extends Controller
         ]);
         Evento::whereId($id)->update($validatedData);
 
-        return redirect('/eventos')->with('success', 'Evento is successfully updated');
+        return response()->json(['success' => 'Evento is successfully updated']);
     }
 
     /**

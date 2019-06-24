@@ -78,6 +78,7 @@
 			<!-- Page Content -->
 			<div id="eventos">
 			@foreach($eventos->reverse(); as $evento)
+			<a href="/quadro/{{$evento->id}}">
 			<div ondblclick="{{$evento->id}}" class="content co-2 photo normal-shadow">
 				<div class="card">
 				  <img class="card-img-top" height="200px" src="{{URL::asset('/img/background.png')}}" alt="Card image cap">
@@ -86,6 +87,7 @@
 				  </div>
 				</div>
 			</div>
+			</a>
       @endforeach
 	  </div>
 		</div>
@@ -105,19 +107,21 @@
 				dataType: 'json',
 				success:function(data) {
 					$('#eventos').prepend(
-						$('<div>', {class: 'content co-2 photo normal-shadow'}).append(
-							$('<div>', {class: 'card'}).on('mouseover', function(){
-								if ($(this).children('.novoEvento') != null) {
-									$(this).children('.novoEvento').fadeOut();
-								}
-							}).append(
-								$('<img>', {class: 'card-img-top', height: '200px', src: "{{URL::asset('/img/background.png')}}"}),
-								$('<div>', {class: 'card-body'}).append(
-									$('<h5>', {class: 'card-title', html: data.nome})
-								),
-								$('<div>', {class: 'novoEvento', html: 'NOVO'})
-							)
-						).hide().fadeIn("slow")
+						$('<a>', {href: '/quadro/'+ data.id}).append(
+							$('<div>', {class: 'content co-2 photo normal-shadow'}).append(
+								$('<div>', {class: 'card'}).on('mouseover', function(){
+									if ($(this).children('.novoEvento') != null) {
+										$(this).children('.novoEvento').fadeOut();
+									}
+								}).append(
+									$('<img>', {class: 'card-img-top', height: '200px', src: "{{URL::asset('/img/background.png')}}"}),
+									$('<div>', {class: 'card-body'}).append(
+										$('<h5>', {class: 'card-title', html: data.nome})
+									),
+									$('<div>', {class: 'novoEvento', html: 'NOVO'})
+								)
+							).hide().fadeIn("slow")
+						)
 					);
 					$('#cadastrarEvento').removeAttr('disabled', '');
 					$('#cancelarCadastro').click();

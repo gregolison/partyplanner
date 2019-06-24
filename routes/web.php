@@ -30,6 +30,8 @@ Route::resource('eventos','EventoController');
 Route::get('evento','EventoController@index');
 
 Route::get('cadastraEvento','EventoController@store');
+Route::get('editarEvento','EventoController@update');
 
 Route::get('quadro/{servico}/1','QuadroController@show');
 Route::resource('quadro','QuadroController');
+Route::get('quadro/{evento}','QuadroController@edit');
