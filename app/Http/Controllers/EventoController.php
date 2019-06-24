@@ -78,7 +78,12 @@ class EventoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'nome' => 'required|max:255',
+        ]);
+        Evento::whereId($id)->update($validatedData);
+
+        return redirect('/eventos')->with('success', 'Evento is successfully updated');
     }
 
     /**
