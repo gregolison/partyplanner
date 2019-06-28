@@ -34,7 +34,7 @@
 								</div>
 								
 								<div class="modal-footer">
-									<button id="cadastrarEvento" type="button" class="btn btn-primary">Criar evento</button>
+									<input id="cadastrarEvento" type="submit" class="btn btn-primary" value="Criar evento"/>
 									<button id="cancelarCadastro" type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cancelar</button> 
 								</div>
 							</form>
@@ -78,16 +78,16 @@
 			<!-- Page Content -->
 			<div id="eventos">
 			@foreach($eventos->reverse(); as $evento)
-			<a href="/quadro/{{$evento->id}}">
-			<div ondblclick="{{$evento->id}}" class="content co-2 photo normal-shadow">
-				<div class="card">
+			<!--<a href="/quadro/{{$evento->id}}">-->
+			<div class="content co-2 photo normal-shadow">
+				<div class="card" data-id="{{$evento->id}}">
 				  <img class="card-img-top" height="200px" src="{{URL::asset('/img/background.png')}}" alt="Card image cap">
 				  <div class="card-body">
 				    <h5 class="card-title">{{$evento->nome}}</h5>
 				  </div>
 				</div>
 			</div>
-			</a>
+			<!--</a>-->
       @endforeach
 	  </div>
 		</div>
@@ -96,6 +96,7 @@
 	<script type="text/javascript">
 	
 	$(function() {
+		//window.location.replace('eventos');
 		$('#cadastrarEvento').on('click', function(){
 			$('#cadastrarEvento').attr('disabled', '');
 			var nome = $('#nome').val();
@@ -107,21 +108,22 @@
 				dataType: 'json',
 				success:function(data) {
 					$('#eventos').prepend(
-						$('<a>', {href: '/quadro/'+ data.id}).append(
-							$('<div>', {class: 'content co-2 photo normal-shadow'}).append(
-								$('<div>', {class: 'card'}).on('mouseover', function(){
-									if ($(this).children('.novoEvento') != null) {
-										$(this).children('.novoEvento').fadeOut();
-									}
-								}).append(
-									$('<img>', {class: 'card-img-top', height: '200px', src: "{{URL::asset('/img/background.png')}}"}),
-									$('<div>', {class: 'card-body'}).append(
-										$('<h5>', {class: 'card-title', html: data.nome})
-									),
-									$('<div>', {class: 'novoEvento', html: 'NOVO'})
-								)
-							).hide().fadeIn("slow")
-						)
+						$('<div>', {class: 'content co-2 photo normal-shadow'}).append(
+							$('<div>', {class: 'card', 'data-id': data.id}).on('mouseover', function(){
+								if ($(this).children('.novoEvento') != null) {
+									$(this).children('.novoEvento').fadeOut();
+								}
+							}).on('dblclick', function(){
+								eventoId = $(this).attr('data-id');
+								window.location.assign('/quadro/'+eventoId);
+							}).append(
+								$('<img>', {class: 'card-img-top', height: '200px', src: "{{URL::asset('/img/background.png')}}"}),
+								$('<div>', {class: 'card-body'}).append(
+									$('<h5>', {class: 'card-title', html: data.nome})
+								),
+								$('<div>', {class: 'novoEvento', html: 'NOVO'})
+							)
+						).hide().fadeIn("slow")
 					);
 					$('#cadastrarEvento').removeAttr('disabled', '');
 					$('#cancelarCadastro').click();
@@ -130,6 +132,11 @@
 		});
 		$('#cancelarCadastro').on('click', function(){
 			$('#nome').val('');
+		});
+
+		$('.content .card').on('dblclick', function(){
+			eventoId = $(this).attr('data-id');
+			window.location.assign('/quadro/'+eventoId);
 		});
 	});
 

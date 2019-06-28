@@ -1,9 +1,15 @@
 <nav id="sidebar" class="minimized normal-shadow">
+				<button id="encolheMenu" class="btn-diferente" style="display: none">
+						<i class="fas fa-angle-left"></i>
+				</button>
+				<button id="expandeMenu" class="btn-diferente">
+                    	<i class="fas fa-angle-right"></i>
+				</button>
             <div class="sidebar-header">
 				<div class="header-photo circle">
-					<img src="{{asset('img/fotosPerfil/minha_foto_teste.jpg')}}"/>
+					<img src="{{asset('img/logo.png')}}"/>
 				</div>
-				<div class="header-nome">Grégori Poloni</div>
+				<div class="header-nome">Partyplanner</div>
             </div>
     		<!--<ul class="list-unstyled components">
 				<li class="active li-add">
@@ -86,11 +92,5 @@
                     	<i class="fab fa-slideshare"></i><span>Compartilhados</span>
                 	</li>
                 </a>
-				<button id="encolheMenu" class="btn-diferente" style="display: none">
-						<i class="fas fa-angle-left"></i>
-				</button>
-				<button id="expandeMenu" class="btn-diferente">
-                    	<i class="fas fa-angle-right"></i>
-				</button>
             </ul>
         </nav>
