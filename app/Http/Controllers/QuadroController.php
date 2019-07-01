@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Quadro;
 use App\Servico;
+use App\Evento;
 use Illuminate\Http\Request;
 
 class QuadroController extends Controller
@@ -42,11 +43,11 @@ class QuadroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($servico)
+    public function show($eventoid)
     {
-        $servico = Servico::find($servico);
+        $evento = Evento::find($eventoid);
 
-        return view('quadro');  
+        return view('quadro', compact('evento'));  
     }
 
     /**

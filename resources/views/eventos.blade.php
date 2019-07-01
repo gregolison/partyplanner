@@ -78,7 +78,7 @@
 			<!-- Page Content -->
 			<div id="eventos">
 			@foreach($eventos->reverse(); as $evento)
-			<!--<a href="/quadro/{{$evento->id}}">-->
+			<a href="/quadro/{{$evento->id}}">
 			<div class="content co-2 photo normal-shadow">
 				<div class="card" data-id="{{$evento->id}}">
 				  <img class="card-img-top" height="200px" src="{{URL::asset('/img/background.png')}}" alt="Card image cap">
@@ -87,7 +87,7 @@
 				  </div>
 				</div>
 			</div>
-			<!--</a>-->
+			</a>
       @endforeach
 	  </div>
 		</div>

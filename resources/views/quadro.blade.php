@@ -22,13 +22,18 @@
 				<div class="col-lg-12">
 			        <div class="form-group">
 			            <label class="form-control-label" for="input-first-name">Nome</label>
-			            <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Meu evento">
+			            <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$evento->nome}}">
 			        </div>
 			    </div>
 			    <div class="col-lg-12">
 			        <div class="form-group">
 			            <label class="form-control-label" for="input-first-name">Descrição</label>
-			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum ante quis nisi porttitor.</textarea>
+			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">{{$evento->descricao}}</textarea>
+			        </div>
+			    </div>
+				<div class="col-lg-12">
+			        <div class="form-group">
+			            <label class="form-control-label" for="input-first-name"></label>
 			        </div>
 			    </div>
 			</div>
