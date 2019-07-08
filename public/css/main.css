@@ -91,7 +91,8 @@ a, a:hover, a:focus {
 	width: 74px;
 	height: 74px;
 	margin: auto;
-	border: solid 2px #fff;
+	/*border: solid 2px #fff;*/
+	padding: 2px;
 	/*background-image: url('../img/noimage4.png');*/
 	background-size: 100% 100%;
 }
@@ -380,7 +381,6 @@ a, a:hover, a:focus {
 	position: relative;
     float: right;
     background-color: white;
-    left: 20px;
 }
 .normal-shadow{
 	box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
@@ -397,13 +397,10 @@ a, a:hover, a:focus {
 
 .content-header {
     padding: 20px 20px 0px;
-	height: 200px;
-	margin-bottom: 50px;
 }
 .content-header .header-photo {
 	width: 200px;
 	height: 200px;
-	margin: auto;
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
