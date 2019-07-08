@@ -17,4 +17,10 @@ class Servico extends Model
   //  public $rules = [
 
 //    ];
+
+    public function eventos (){
+      return $this->belongsToMany('App\evento');
+    }
+
+
 }
