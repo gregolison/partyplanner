@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Evento;
 use App\Servico;
 use Illuminate\Http\Request;
 use App\Http\Requests\servicoFormRequest;
@@ -19,8 +19,10 @@ class ServicosController extends Controller
      */
     public function index()
     {
-        $servicos = $this->servicoConstruct->all();
-        return view('servicos.index', compact('servicos'));
+        $data = [];
+        $data['evento'] = Evento::all();
+        $data['servico'] = Servico::all();
+        return view('servicos.index', compact('data'));
     }
 
     /**

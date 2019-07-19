@@ -25,7 +25,7 @@
             </tr>
         </thead>
         <tbody>
-        @foreach ($servicos as $servico)
+        @foreach ($data['servico'] as $servico)
             <tr>
                 <th scope="row">{{$servico->id}}</th>
                 <td>{{$servico->name}}</td>
@@ -36,9 +36,11 @@
                     <a href="">Vizualizar</a>
                 </td> 
                 <td>
-                    <a href="/quadro/{{$servico->id}}"> + </a>
+                    @foreach($data['evento'] as $evento)
+                    <a href="/quadro/{{$evento->id}}/{{$servico->id}}"> + {{$evento->nome}}</a>
                 </td>      
             </tr>
+            @endforeach
         @endforeach  
         </tbody>
 @endsection

@@ -35,3 +35,5 @@ Route::get('editarEvento','EventoController@update');
 Route::get('quadro/{evento}','QuadroController@show');
 Route::resource('quadro','QuadroController');
 Route::get('quadro/{evento}/edit','QuadroController@edit');
+
+Route::get('quadro/{evento}/{servico}','QuadroController@servicos');

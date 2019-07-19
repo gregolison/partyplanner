@@ -82,4 +82,8 @@ class QuadroController extends Controller
     {
         //
     }
+
+    public function servicos($evento, $servico){
+        //
+    }
 }
