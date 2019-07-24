@@ -36,11 +36,22 @@
                     <a href="">Vizualizar</a>
                 </td> 
                 <td>
-                    @foreach($data['evento'] as $evento)
-                    <a href="/quadro/{{$evento->id}}/{{$servico->id}}"> + {{$evento->nome}}</a>
-                    @endforeach
+                    <select id='selectAddEvento'>
+                        @foreach($data['evento'] as $evento)
+                        <option value="/quadro/{{$evento->id}}/{{$servico->id}}">{{$evento->nome}}</option>
+                        @endforeach
+                    </select>
                 </td>      
             </tr>
         @endforeach  
         </tbody>
+        <script type="text/javascript">
+	
+	$(function() {
+        $('#selectAddEvento').on('change', function(){
+            pagEvento = $(this).val();
+            window.location.assign(pagEvento);
+        });
+    });
+        </script>
 @endsection

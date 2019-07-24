@@ -18,7 +18,7 @@ Route::view('listagem', 'listagem');
 
 Route::get('/procurarservico', 'PesquisaServicoController@search')->name('search');
 
-Route::resource('/internals/servicos', 'ServicosController');
+Route::resource('servicos', 'ServicosController');
 
 Route::get('/internals/organizador', 'OrganizadorController@list');
 Route::post('/internals/organizador', 'OrganizadorController@store');
