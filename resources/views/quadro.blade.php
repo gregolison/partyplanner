@@ -27,7 +27,7 @@
 					<div class="col-lg-12">
 						<div class="form-group">
 							<label class="form-control-label" for="input-first-name">Descrição</label>
-			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">{{$evento->descricao}}</textarea>
+			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">{{$data['evento']->descricao}}</textarea>
 						</div>
 					</div>
 				</div>
@@ -39,13 +39,13 @@
 				<div class="col-lg-12" style="margin-top: 20px;">
 			        <div class="form-group">
 			            <label class="form-control-label" for="input-first-name">Nome</label>
-			            <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$evento->nome}}">
+			            <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$data['evento']->nome}}">
 			        </div>
 			    </div>
 			    <div class="col-lg-12">
 			        <div class="form-group">
 			            <label class="form-control-label" for="input-first-name">Descrição</label>
-			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">{{$evento->descricao}}</textarea>
+			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">{{$data['evento']->descricao}}</textarea>
 			        </div>
 			    </div>
 				<div class="col-lg-12">
@@ -55,7 +55,7 @@
 			    </div>
 			</div>
 			<div class="content co-10 coh-4 co-ult normal-shadow">
-				<!-- We'll fill this with dummy content -->
+				{{$data['servico']->name}}
 			</div>
 		</div>
 

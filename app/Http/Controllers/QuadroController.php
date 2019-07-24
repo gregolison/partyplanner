@@ -45,9 +45,9 @@ class QuadroController extends Controller
      */
     public function show($eventoid)
     {
-        $evento = Evento::find($eventoid);
+        $data['evento'] = Evento::findorFail($eventoid);
 
-        return view('quadro', compact('evento'));  
+        return view('quadro', compact('data'));  
     }
 
     /**
@@ -84,6 +84,8 @@ class QuadroController extends Controller
     }
 
     public function servicos($evento, $servico){
-        //
+        $data['servico'] = Servico::findOrFail($servico);
+        $data['evento'] = Evento::findOrFail($evento);
+        return view('quadro', compact('data'));
     }
 }

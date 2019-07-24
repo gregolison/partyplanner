@@ -38,9 +38,9 @@
                 <td>
                     @foreach($data['evento'] as $evento)
                     <a href="/quadro/{{$evento->id}}/{{$servico->id}}"> + {{$evento->nome}}</a>
+                    @endforeach
                 </td>      
             </tr>
-            @endforeach
         @endforeach  
         </tbody>
 @endsection
