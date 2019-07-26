@@ -19,7 +19,6 @@ class CreateQuadroServsTable extends Migration
             $table->foreign('id_quadro')->references('id')->on('quadros');
             $table->unsignedBigInteger('id_serv');
             $table->foreign('id_serv')->references('id')->on('servicos');
-            $table->timestamps();
         });
     }
 

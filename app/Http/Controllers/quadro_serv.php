@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+Use App\Evento;
+Use App\Servico;
 use Illuminate\Http\Request;
 
 class quadro_serv extends Controller
@@ -13,7 +14,6 @@ class quadro_serv extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**

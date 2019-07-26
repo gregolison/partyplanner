@@ -5,6 +5,7 @@ use App\Quadro;
 use App\Servico;
 use App\Evento;
 use DB;
+use App\quadro_serv;
 use Illuminate\Http\Request;
 
 class QuadroController extends Controller
