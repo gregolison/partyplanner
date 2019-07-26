@@ -37,6 +37,7 @@
                 </td> 
                 <td>
                     <select id='selectAddEvento'>
+                        <option> </option>
                         @foreach($data['evento'] as $evento)
                         <option value="/quadro/{{$evento->id}}/{{$servico->id}}">{{$evento->nome}}</option>
                         @endforeach
