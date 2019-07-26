@@ -1,13 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Quadro;
-use App\Servico;
-use App\Evento;
-use DB;
+
 use Illuminate\Http\Request;
 
-class QuadroController extends Controller
+class quadro_serv extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,6 +13,7 @@ class QuadroController extends Controller
      */
     public function index()
     {
+        //
     }
 
     /**
@@ -36,6 +34,7 @@ class QuadroController extends Controller
      */
     public function store(Request $request)
     {
+        //
     }
 
     /**
@@ -44,11 +43,9 @@ class QuadroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($eventoid)
+    public function show($id)
     {
-        $data['evento'] = Evento::findorFail($eventoid);
-
-        return view('quadro', compact('data'));  
+        //
     }
 
     /**
@@ -69,8 +66,9 @@ class QuadroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $servico)
+    public function update(Request $request, $id)
     {
+        //
     }
 
     /**
@@ -82,18 +80,5 @@ class QuadroController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function servicos($evento, $servico){
-        $data['servico'] = Servico::findOrFail($servico);
-        $data['evento'] = Evento::findOrFail($evento);
-        DB::table('quadro_servs')->insert(
-            ['id_quadro' => $data['evento']->id ],
-            ['id_serv' => $data['servico']->id ]
-        );
-
-        $ids = quadro_serv::create();
-        
-        return view('quadro', compact('data'));
     }
 }
