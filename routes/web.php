@@ -20,8 +20,7 @@ Route::get('/procurarservico', 'PesquisaServicoController@search')->name('search
 
 Route::resource('servicos', 'ServicosController');
 
-Route::get('/internals/organizador', 'OrganizadorController@list');
-Route::post('/internals/organizador', 'OrganizadorController@store');
+Route::resource('organizadores', 'OrganizadorController');
 
 Route::resource('categorias','CategoriaController');
 Route::get('categoria','CategoriaController@index');
@@ -37,3 +36,5 @@ Route::resource('quadro','QuadroController');
 Route::get('quadro/{evento}/edit','QuadroController@edit');
 
 Route::get('quadro/{evento}/{servico}','quadro_serv@store');
+
+Route::view('paginainicial', 'inicial');

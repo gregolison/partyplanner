@@ -13,7 +13,7 @@ class OrganizadorController extends Controller
 
         
 
-        return view('internals/organizador', [
+        return view('organizadores/create', [
             'organizadores' => $organizadores,
         ]);
     }

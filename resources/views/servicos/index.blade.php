@@ -12,7 +12,6 @@
             <button type="submit" class="btn btn-dark"><i class="fa fa-search"></i> Pesquisar</button>
         </div>
     </form>
-    <a class="btn btn-primary mb-3" href="{{route('servicos.create')}}" role="button">Novo serviço</a> 
     <table class="table table-bordered">
         <thead class="thead-dark">
             <tr>
