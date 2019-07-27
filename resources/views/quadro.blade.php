@@ -13,6 +13,7 @@
 			<div class="filtros">Edição do evento</div>
 			<!-- Page Content -->
 			<div class="content co-10 normal-shadow">
+				<input type="hidden" id="idEvento" name="idEvento" value=""/>
 				<div style="float: right;">
 					<div class="col-lg-12">
 						<div class="form-group">
@@ -27,7 +28,7 @@
 					<div class="col-lg-12">
 						<div class="form-group">
 							<label class="form-control-label" for="input-first-name">Descrição</label>
-			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">{{$data['evento']->descricao}}</textarea>
+			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ..."></textarea>
 						</div>
 					</div>
 				</div>
@@ -38,14 +39,12 @@
 				</div>
 				<div class="col-lg-12" style="margin-top: 20px;">
 			        <div class="form-group">
-			            <label class="form-control-label" for="input-first-name">Nome</label>
-			            <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$data['evento']->nome}}">
+			            <input type="text" style="width: auto !important;" id="input-nome" class="form-control form-control-alternative form-edita form-title" placeholder="First name" value="Evento teste 1">
 			        </div>
 			    </div>
 			    <div class="col-lg-12">
 			        <div class="form-group">
-			            <label class="form-control-label" for="input-first-name">Descrição</label>
-			            <textarea class="form-control form-control-alternative" rows="3" placeholder="Write a large text here ...">{{$data['evento']->descricao}}</textarea>
+			            <textarea style="width: 300px !important;" class="form-control form-control-alternative form-edita" rows="3" placeholder="Festa teste para olhar o tamanho das coisas"></textarea>
 			        </div>
 			    </div>
 				<div class="col-lg-12">
@@ -55,14 +54,31 @@
 			    </div>
 			</div>
 			<div class="content co-10 coh-4 co-ult normal-shadow">
-				{{$data['servico']->name}}
+				<!-- We'll fill this with dummy content -->
 			</div>
 		</div>
 
 	<script type="text/javascript">
+
+	primeiroNome = $('#input-nome').val();
 	
 	$(function() {
-		
+		$('#input-nome').on('blur', function(){
+			nomeNovo = $(this).val();
+			if (nomeNovo != primeiroNome) {
+				idEvento = $('#idEvento').val();
+				$.ajax({
+					url: "editaEvento/"+idEvento,
+					method: 'get',
+					data: {'nome': nomeNovo},
+					dataType: 'json',
+					success:function(data) {
+						alert('aaaa333');
+					}
+				})
+				primeiroNome = nomeNovo;
+			}
+		});
 	});
 
 	</script>

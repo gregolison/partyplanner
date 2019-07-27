@@ -374,12 +374,13 @@ a, a:hover, a:focus {
 	outline: none;
 }
 #encolheMenu{
-	float: right;
+	position: fixed;
+    bottom: 0px;
     margin: 10px 10px 0px 0px;
 }
 #expandeMenu{
-	position: relative;
-    float: right;
+	position: fixed;
+    bottom: 0px;
     background-color: white;
 }
 .normal-shadow{
@@ -447,4 +448,14 @@ a, a:hover, a:focus {
 	color: white;
 	font-size: 10px;
 	font-weight: bold;
+}
+.form-edita{
+	color: #525f7f !important;
+	background-color: transparent !important;
+}
+.form-edita:focus{
+	background-color: #ebeef9 !important;
+}
+.form-title{
+	font-size: 1.5rem !important;
 }
