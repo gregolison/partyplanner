@@ -85,16 +85,4 @@ class QuadroController extends Controller
         //
     }
 
-    public function servicos($evento, $servico){
-        $data['servico'] = Servico::findOrFail($servico);
-        $data['evento'] = Evento::findOrFail($evento);
-        DB::table('quadro_servs')->insert(
-            ['id_quadro' => $data['evento']->id ],
-            ['id_serv' => $data['servico']->id ]
-        );
-
-        $ids = quadro_serv::create();
-        
-        return view('quadro', compact('data'));
-    }
 }

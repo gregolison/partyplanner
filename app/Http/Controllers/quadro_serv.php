@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 Use App\Evento;
 Use App\Servico;
+Use DB;
 use Illuminate\Http\Request;
 
 class quadro_serv extends Controller
@@ -14,6 +15,9 @@ class quadro_serv extends Controller
      */
     public function index()
     {
+        $quadro_serv = quadro_serv::all();
+
+        return view('quadro', compact('quadro_serv'));
     }
 
     /**
@@ -32,9 +36,14 @@ class quadro_serv extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($servico, $evento)
     {
-        //
+        $data['servico'] = Servico::findOrFail($servico);
+        $data['evento'] = Evento::findOrFail($evento);
+        DB::insert('insert into quadro_servs (id_serv, id_quadro) values (?, ?)', [$data['servico']->id, $data['evento']->id]);
+       $ids = quadro_serv::create();
+        
+        return view('quadro', compact('data'));
     }
 
     /**

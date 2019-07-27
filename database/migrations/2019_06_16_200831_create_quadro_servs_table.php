@@ -16,7 +16,7 @@ class CreateQuadroServsTable extends Migration
         Schema::create('quadro_servs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_quadro');
-            $table->foreign('id_quadro')->references('id')->on('quadros');
+            $table->foreign('id_quadro')->references('id')->on('eventos');
             $table->unsignedBigInteger('id_serv');
             $table->foreign('id_serv')->references('id')->on('servicos');
         });
